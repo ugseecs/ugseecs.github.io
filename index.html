@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usama Gulzar — Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Usama Gulzar — CS @ SEECS | NUST. Logic automation, game engines, systems." />
+  <meta name="theme-color" content="#050508" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Noise texture overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Aurora blobs -->
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora__blob aurora__blob--1"></div>
+    <div class="aurora__blob aurora__blob--2"></div>
+    <div class="aurora__blob aurora__blob--3"></div>
+  </div>
+
+  <!-- Floating cursor glow -->
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Sticky header (appears after name morphs away) -->
+  <nav class="topbar" id="topbar">
+    <span class="topbar__name" id="topbar-name">Usama Gulzar</span>
+    <div class="topbar__socials" id="topbar-socials"></div>
+  </nav>
+
+  <!-- ═══ SECTION 0: The Name — fullscreen, bold, scroll-morphs ═══ -->
+  <section class="s-name" id="s-name">
+    <h1 class="name-text" id="name-text" aria-label="Usama Gulzar">
+      <span class="name-char" data-char="U">U</span><span class="name-char" data-char="s">s</span><span
+        class="name-char" data-char="a">a</span><span class="name-char" data-char="m">m</span><span class="name-char"
+        data-char="a">a</span>
+      <br />
+      <span class="name-char name-char--last" data-char="G">G</span><span class="name-char name-char--last"
+        data-char="u">u</span><span class="name-char name-char--last" data-char="l">l</span><span
+        class="name-char name-char--last" data-char="z">z</span><span class="name-char name-char--last"
+        data-char="a">a</span><span class="name-char name-char--last" data-char="r">r</span>
+    </h1>
+    <div class="scroll-hint" id="scroll-hint">
+      <div class="scroll-hint__line"></div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 1: Identity reveal ═══ -->
+  <section class="s-identity" id="s-identity">
+    <div class="identity__inner">
+      <div class="identity__grid">
+        <div class="identity__main">
+          <div class="mono-label">PORTFOLIO // 2026</div>
+          <p class="identity__tagline" id="identity-tagline"></p>
+          <div class="availability">
+            <div class="pulse-dot"></div>
+            <span>Available for opportunities</span>
+            <div class="divider"></div>
+            <span id="identity-timeline"></span>
+          </div>
+        </div>
+
+        <div class="identity__meta">
+          <div class="meta-block">
+            <div class="mono-label">FOCUS</div>
+            <div class="tech-tags">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 2: Projects ═══ -->
+  <section class="s-projects" id="s-projects">
+    <div class="projects__header">
+      <h2 class="section-title">Projects</h2>
+      <span class="mono-label">SELECTED WORKS</span>
+    </div>
+    <div class="projects__list" id="projects-list"></div>
+  </section>
+
+  <!-- ═══ SECTION 3: Connect ═══ -->
+  <section class="s-connect" id="s-connect">
+    <div class="connect__inner">
+      <div class="connect__header">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="connect__desc">Always interested in new challenges and collaborations.</p>
+        <a href="mailto:ugseecs@gmail.com" class="connect__email">
+          ugseecs@gmail.com
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+      <div class="connect__socials" id="identity-socials">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Project Page (Full Screen Overlay) ═══ -->
+  <div class="project-page" id="project-page" aria-hidden="true">
+    <div class="project-page__inner">
+      <nav class="project-page__nav">
+        <button class="project-page__back" id="project-page-back" aria-label="Go back">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M15 10H5M5 10L10 5M5 10L10 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <span>Back</span>
+        </button>
+      </nav>
+      <article class="project-page__content">
+        <header class="project-page__header">
+          <div class="project-page__tags" id="pp-tags"></div>
+          <h1 class="project-page__title" id="pp-title"></h1>
+          <p class="project-page__subtitle" id="pp-desc"></p>
+          <div class="project-page__actions">
+            <a href="#" class="btn-primary" id="pp-link" target="_blank" rel="noopener">
+              <span>View Live</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </header>
+        <div class="project-page__body" id="pp-body"></div>
+      </article>
+    </div>
+  </div>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="footer" id="footer">
+    <span>&copy; 2026 Usama Gulzar</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+{
+  "profile": {
+    "name": "Usama Gulzar",
+    "tagline": "CS @ SEECS | NUST",
+    "timeline": "2026 - Present",
+    "socials": [
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/ugseecs",
+        "icon": "github"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/usamagulzar",
+        "icon": "linkedin"
+      },
+      {
+        "platform": "Email",
+        "url": "mailto:ugseecs@gmail.com",
+        "icon": "email"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "mantiq",
+      "title": "mantiq",
+      "icon": "logic-gate",
+      "short_desc": "A Logical Calculator & DLD Lab Automator",
+      "link": "https://ugseecs.github.io/mantiq",
+      "tags": [
+        "C++",
+        "Raylib",
+        "DLD",
+        "Boolean Logic"
+      ],
+      "content_blocks": [
+        {
+          "type": "paragraph",
+          "text": "Imagine finishing a brutal DLD lab report — Truth Tables, 3D K-Maps, Circuit Diagrams, Verilog code, Wave Diagrams, and a Quine-McCluskey Table — in the time it takes your classmates to draw their first grid. Manual logic simplification isn't a test of intelligence; it's a test of endurance. One miscalculated minterm, and your entire assignment goes up in smoke."
+        },
+        {
+          "type": "highlight_quote",
+          "text": "You are an engineer. It is time to stop doing a machine's job."
+        },
+        {
+          "type": "feature_list",
+          "heading": "Automate the Busywork",
+          "items": [
+            "**The Q-M Cheat Code:** Write an expression for up to 6 variables. Mantiq generates the exact, step-by-step mathematical proof. Copy the working, secure the grade.",
+            "**K-Maps, Now in 3D:** 2D grids break down at 5+ variables. Mantiq maps complex logic into native, interactive 3D space. Spin the map and see corner adjacencies connect.",
+            "**Live Logic Topography:** Fully live editable K-maps with don't-care toggles. Watch your groupings and EPIs shift in real-time.",
+            "**Zero-Burn Simulation:** Toggle inputs and watch the signal flow through gates live. Verify architecture virtually before tracing a wire on a breadboard.",
+            "**Lab Reports on Autopilot:** Export Truth Tables straight to CSV. Pull K-Maps, circuit diagrams, and waveforms as high-res PNGs right into your document.",
+            "**Instant Verilog Compilation:** Translates your optimized logic directly into Dataflow and Gate-Level Verilog instantly."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9th-grudge",
+      "title": "9th Grudge",
+      "icon": "gamepad",
+      "short_desc": "2D Space Defense Engine: The Planet They Forgot",
+      "link": "https://usamagulzar.itch.io/ninthgrudge",
+      "tags": [
+        "C++",
+        "Raylib",
+        "Game Engine",
+        "Physics"
+      ],
+      "content_blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pluto is angry about being demoted to a 'dwarf planet.' The Plutonians have invaded Earth. Defense systems are down. You are a lone satellite—humanity's last hope. A 2D space defense game where physics meets revenge."
+        },
+        {
+          "type": "grid_cards",
+          "heading": "Gameplay Mechanics",
+          "cards": [
+            {
+              "title": "Survival System",
+              "text": "3 lives. Earth loses 2.5 energy/sec. Destroy bases for +15 energy. Friendly fire costs -20!"
+            },
+            {
+              "title": "Physics & Chaos",
+              "text": "Real trigonometry-based orbital movement. Planet rotation speed fluctuates (1.0x to 3.5x). Meteor waves every 5 seconds."
+            },
+            {
+              "title": "Encrypted Leaderboard",
+              "text": "Top 10 scores saved securely. Compete against parody names like Alone Musk, Bilal Gates, and Gen. Zia-ul-Lag."
+            }
+          ]
+        },
+        {
+          "type": "feature_list",
+          "heading": "Polish & Features",
+          "items": [
+            "15 Unique Satellite Skins & 4 Laser Colors.",
+            "Dynamic Context-Aware Music (15 tracks synced to Satellite Skins).",
+            "Particle Explosions (Flash, Fire, Smoke) and Comic-style Intro Slideshow."
+          ]
+        }
+      ]
+    }
+  ]
+}
