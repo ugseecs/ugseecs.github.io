@@ -11,7 +11,7 @@
       },
       {
         "platform": "LinkedIn",
-        "url": "https://linkedin.com/in/usamagulzar",
+        "url": "https://linkedin.com/in/usamaseecs29",
         "icon": "linkedin"
       },
       {
@@ -26,7 +26,7 @@
       "id": "mantiq",
       "title": "mantiq",
       "icon": "logic-gate",
-      "short_desc": "A Logical Calculator & DLD Lab Automator",
+      "short_desc": "A Logical Calculator",
       "link": "https://ugseecs.github.io/mantiq",
       "tags": [
         "C++",
