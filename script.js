@@ -41,9 +41,12 @@
     const topbar = $('#topbar');
     const total = chars.length;
 
+    let scrollTimeout;
+
     function onScroll() {
       const rect = section.getBoundingClientRect();
-      const progress = Math.max(0, Math.min(1, -rect.top / (rect.height * 0.6)));
+      const morphZone = rect.height * 0.6;
+      const progress = Math.max(0, Math.min(1, -rect.top / morphZone));
 
       chars.forEach((ch, i) => {
         const charStart = (i / total) * 0.5;
@@ -72,6 +75,18 @@
       // Show/hide topbar when name fully morphed
       if (progress > 0.7) topbar.classList.add('topbar--visible');
       else topbar.classList.remove('topbar--visible');
+
+      // Auto-snap if stopped scrolling mid-morph
+      clearTimeout(scrollTimeout);
+      if (progress > 0 && progress < 1) {
+        scrollTimeout = setTimeout(() => {
+          if (progress < 0.35) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+            window.scrollTo({ top: morphZone + 5, behavior: 'smooth' });
+          }
+        }, 150);
+      }
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
